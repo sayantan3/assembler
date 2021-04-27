@@ -9,8 +9,6 @@ There are two different types of assemblers
 
 2. two-pass assembler : in first pass it collects the labels and symbols and in second pass it assembles the instructions, it stores mnemonics and pseudo codes seperately, literals and symbols are stored in literal and symbol table respectively, the second pass assembler locates and cpmpletes (using the symbol table) the partial instruction (e.g. [JWASM](https://en.wikipedia.org/wiki/Open_Watcom_Assembler))
 
-![Diagram](ihttps://github.com/sayantan3/assembler/blob/MAIN/assembly_diagram.png?raw=true)
-
 Why 2 pass assembler?
 One pass assembler cannot resolve forward references of data symbols. It requires all data symbols to be defined prior to being used. A two-pass assembler solves this dilemma by devoting one-pass to exclusively resolve all (data/label) forward references and then generate machine code with no hassels in the next pass![assembly_diagram](https://user-images.githubusercontent.com/72422013/116241199-44652b00-a782-11eb-814f-b4e43aa6b94b.png)
 <img width="636" alt="flow_char_2pass" src="https://user-images.githubusercontent.com/72422013/116241220-48914880-a782-11eb-98d5-f6f5cd4dc41f.png">
